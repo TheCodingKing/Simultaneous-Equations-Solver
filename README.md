@@ -1,11 +1,16 @@
-# Simultaneous-Equations-Solver
+# 👉 Simultaneous Equations Solver
+
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
+
 Simple tool to solve systems of equations
 
-**Requirements**
+## ℹ️ Requirements
 - Numpy (for solving using matrices)
 - String (native Python module)
 
-**How it works**
+## 💡 How it works
 - Systems of equations can be modelled as matrices in order to solve them
 - The concept and example illustrated below explain the calculations that occur:
 
@@ -29,7 +34,7 @@ z
 = A^{-1} C
 $$
 
-**Example**
+### Example
 
 [//]: # "Example equations"
 $$ 3x+2y-z=11 $$
@@ -88,7 +93,7 @@ z
 \end{bmatrix} \\
 $$
 
-**Solutions:**
+### Solutions
 
 $$ x=4 \\ $$
 
@@ -96,5 +101,6 @@ $$ y=2 \\ $$
 
 $$ z=5 $$
 
-**Limitations**
+## 👎 Limitations
 - Only supports three variables at the moment
+- Doesn't currently support float inputs 

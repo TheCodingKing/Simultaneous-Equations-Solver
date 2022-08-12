@@ -41,7 +41,7 @@ $$ 3x+2y-z=11 $$
 
 $$ 2x-3y+z=7 $$
 
-$$ 5x+y-2z=12 \\$$
+$$ 5x+y-2z=12 \\ $$
 
 
 [//]: # "Example solving steps"

@@ -1,6 +1,7 @@
 from numpy import matrix
 from string import ascii_lowercase as alphabet
 
+
 def int_input(text, context="coefficient_input"):
     while True:
         try:
@@ -12,6 +13,7 @@ def int_input(text, context="coefficient_input"):
             print("Please enter in integer form.")
         except IndexError:
             print("Sorry, this program only supports from 1-3 variables. Please try again")
+
 
 unknown_variables = ["x", "y", "z"]  # This script only supports solving upto three unknowns (for now)
 

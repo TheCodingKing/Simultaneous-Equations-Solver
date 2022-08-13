@@ -1,9 +1,22 @@
 from numpy import matrix
 from string import ascii_lowercase as alphabet
 
+def int_input(text, context="coefficient_input"):
+    while True:
+        try:
+            get_input = int(input(text).strip())
+            if context == "no_of_vars_input" and get_input not in (1, 2, 3):
+                raise IndexError
+            return get_input
+        except ValueError:
+            print("Please enter in integer form.")
+        except IndexError:
+            print("Sorry, this program only supports from 1-3 variables. Please try again")
+
 unknown_variables = ["x", "y", "z"]  # This script only supports solving upto three unknowns (for now)
 
-no_of_variables = int(input("Enter the number of unknown_variables to solve (upto 3): ").strip())
+no_of_variables = int_input("Enter the number of unknown_variables to solve (upto 3): ", context="no_of_vars_input")
+
 
 # Dynamically create variables for each relevant equation, which can be shown to the user before entering inputs
 for n in range(no_of_variables):
@@ -28,8 +41,8 @@ for k in range(no_of_variables):
 for j in range(no_of_variables):
     print(f"\nEquation {j+1}: {globals()[f'eqn{j+1}']}")
     for k in range(no_of_variables):
-        all_coefficients_list.append(int(input(f"{alphabet[k]}: ").strip()))
-    all_constants_list.append(int(input("const: ").strip()))
+        all_coefficients_list.append(int_input(f"{alphabet[k]}: "))
+    all_constants_list.append(int_input("const: "))
 
 # Create a column vector (matrix form) with constant terms
 all_constants_matrix = matrix(all_constants_list).reshape(no_of_variables, 1)

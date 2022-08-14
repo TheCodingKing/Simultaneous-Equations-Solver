@@ -1,7 +1,7 @@
 # 👉 Simultaneous Equations Solver
 
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+![Made with Python](https://forthebadge.com/images/badges/made-with-python.svg "Made with Python")
 
 
 Simple tool to solve systems of equations
